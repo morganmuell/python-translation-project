@@ -28,7 +28,32 @@ def translate_sequence(rna_sequence, genetic_code):
     str
         A string of the translated amino acids.
     """
+
+
     pass
+
+if !len(rna_sequence)>2:
+    print("Error: RNA sequence less than 3 base pairs")
+    q() 
+    else print("File is of appropriate length")
+
+#Here, put translation for first codon and store it as a separate variable
+
+if firstcodon==*:
+    print("Error: first codon in sequence is a stop codon")
+    q()
+    else print("Proceeding with translation")
+
+
+
+    """Okay, so how I'm thinking to do this. It has something to do with a
+    really long dictionary. Should tell python to translate in 3 character
+    chunks somehow fuuuuck i don't know how to do this
+
+    Then, will use and if/then statement to put in the conditions of returning
+    an empty string in event of a sequence less than 3 bp or starting with
+    stop codon.
+    """
 
 def get_all_translations(rna_sequence, genetic_code):
     """Get a list of all amino acid sequences encoded by an RNA sequence.
