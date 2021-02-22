@@ -32,23 +32,12 @@ def translate_sequence(rna_sequence, genetic_code):
 
     pass
 
-if !len(rna_sequence)>2:
-    print("Error: RNA sequence less than 3 base pairs")
-    q() 
-    else print("File is of appropriate length")
-
-#Here, put translation for first codon and store it as a separate variable
-
-if firstcodon==*:
-    print("Error: first codon in sequence is a stop codon")
-    q()
-    else print("Proceeding with translation")
-
-
+#Once it has passed these tests, do the actual translating from a dictionary
+#First define the dictionary
 
     """Okay, so how I'm thinking to do this. It has something to do with a
     really long dictionary. Should tell python to translate in 3 character
-    chunks somehow fuuuuck i don't know how to do this
+    chunks somehow
 
     Then, will use and if/then statement to put in the conditions of returning
     an empty string in event of a sequence less than 3 bp or starting with
@@ -100,7 +89,13 @@ def get_reverse(sequence):
     >>> get_reverse('AUGC')
     'CGUA'
     """
-    pass
+
+    print("\n \n original sequence: " + sequence) #remember to tab within definition of function (look for colon)
+    sequence = sequence[0]
+    print("modified sequence" + sequence)
+    return sequence #for caller of function
+
+
 
 def get_complement(sequence):
     """Get the complement of a `sequence` of nucleotides.
