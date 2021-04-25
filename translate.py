@@ -29,8 +29,8 @@ def translate_sequence(rna_sequence, genetic_code):
         A string of the translated amino acids.
     """
 
-
     pass
+
 
 #Once it has passed these tests, do the actual translating from a dictionary
 #First define the dictionary
@@ -90,9 +90,8 @@ def get_reverse(sequence):
     'CGUA'
     """
     sequence = sequence.upper() # makes whole sequence upper case no matter what the input
+    sequence = sequence[::-1]
     print("\n \n original sequence: " + sequence) #remember to tab within definition of function (look for colon)
-    sequence = sequence[0]
-    print("modified sequence" + sequence)
     return sequence #for caller of function
 
 
@@ -109,7 +108,12 @@ def get_complement(sequence):
     >>> get_complement('AUGC')
     'UACG'
     """
-    pass
+    genetic_code = {'A': U, 'U': A, 'G': C, 'C': G}
+    bases=list(sequence)
+    for i in range(len(seq_list)):
+        seq_list[i] = complement_dict[seq_list[i]]
+    return ''.join(seq_list)
+        
 
 def reverse_and_complement(sequence):
     """Get the reversed and complemented form of a `sequence` of nucleotides.
@@ -124,7 +128,9 @@ def reverse_and_complement(sequence):
     >>> reverse_and_complement('AUGC')
     'GCAU'
     """
-    pass
+    sequence = get_reverse(sequence)
+    sequence = get_complement(sequence)
+    return sequence
 
 def get_longest_peptide(rna_sequence, genetic_code):
     """Get the longest peptide encoded by an RNA sequence.
