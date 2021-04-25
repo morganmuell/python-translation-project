@@ -89,7 +89,7 @@ def get_reverse(sequence):
     >>> get_reverse('AUGC')
     'CGUA'
     """
-
+    sequence = sequence.upper() # makes whole sequence upper case no matter what the input
     print("\n \n original sequence: " + sequence) #remember to tab within definition of function (look for colon)
     sequence = sequence[0]
     print("modified sequence" + sequence)
